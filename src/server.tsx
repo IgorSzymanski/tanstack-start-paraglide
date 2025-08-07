@@ -11,8 +11,8 @@ import { router } from "./router";
 export default createStartHandler({
   createRouter: () => router,
 })((event) =>
-  paraglideMiddleware(getWebRequest(), ({ locale }) => {
+  paraglideMiddleware(getWebRequest(), ({ locale, request }) => {
     overwriteGetLocale(() => locale);
-    return defaultStreamHandler(event);
-  }),
+    return defaultStreamHandler({ ...event, request });
+  })
 );

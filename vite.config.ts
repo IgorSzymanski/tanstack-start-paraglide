@@ -16,6 +16,13 @@ export default defineConfig({
       strategy: ["url", "cookie", "preferredLanguage", "baseLocale"],
       urlPatterns: [
         {
+          pattern: "/{-$locale}/about",
+          localized: [
+            ["en", "/en/about"],
+            ["de", "/de/uber"],
+          ],
+        },
+        {
           pattern: "/:path(.*)?",
           localized: [
             ["en", "/en/:path(.*)?"],

@@ -1,5 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "example_message": "Hello world {username}",
-  "server_message": "Server message {emoji}"
+  "server_message": "Server message {emoji}",
+  "about_message": "About message page"
 }
