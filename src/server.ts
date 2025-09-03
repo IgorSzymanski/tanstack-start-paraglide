@@ -6,7 +6,9 @@ import {
 
 import { paraglideMiddleware } from "./paraglide/server.js";
 import { overwriteGetLocale } from "./paraglide/runtime.js";
-import { router } from "./router";
+import { router } from "./router.js";
+
+import "./global-middleware";
 
 export default createStartHandler({
   createRouter: () => router,
